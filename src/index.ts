@@ -1,12 +1,13 @@
 import { createServer } from "vite";
 import { ViteNodeServer } from "vite-node/server";
 import { ViteNodeRunner } from "vite-node/client";
+import chalk from "chalk";
 
 const file = process.argv[2];
 
 const main = async () => {
   if (!file) {
-    console.error("File path not specified");
+    console.log(chalk.red("File path not specified"));
     return;
   }
 
