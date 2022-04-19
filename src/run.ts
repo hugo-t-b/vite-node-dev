@@ -1,15 +1,14 @@
-import { createServer } from "vite";
-import { ViteNodeServer } from "vite-node/server";
-import { ViteNodeRunner } from "vite-node/client";
 import chalk from "chalk";
+import { ViteDevServer } from "vite";
+import { ViteNodeRunner } from "vite-node/client";
+import { ViteNodeServer } from "vite-node/server";
 
-export default async (script: string) => {
+export default async (viteServer: ViteDevServer, script: string) => {
   if (!script) {
     console.log(chalk.red("File path not specified"));
     return;
   }
 
-  const viteServer = await createServer();
   await viteServer.pluginContainer.buildStart({});
 
   const nodeServer = new ViteNodeServer(viteServer);
@@ -28,5 +27,4 @@ export default async (script: string) => {
   });
 
   await runner.executeFile(script);
-  await viteServer.close();
 };
