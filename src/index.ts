@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { createServer } from "vite";
 
 import errorHandler from "./error-handler.js";
