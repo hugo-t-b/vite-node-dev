@@ -24,5 +24,5 @@ export default async (viteServer: ViteDevServer, script: string) => {
     }
   });
 
-  await runner.executeFile(script);
+  runner.executeFile(script);
 };
