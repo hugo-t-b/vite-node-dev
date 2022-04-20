@@ -9,7 +9,7 @@ export class AppError extends Error {
   }
 };
 
-export default (error: unknown) => {
+export default (error?: unknown) => {
   let message = "An error occurred";
 
   if (typeof error === "string") message = error;
