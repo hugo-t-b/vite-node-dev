@@ -1,13 +1,11 @@
-import chalk from "chalk";
 import { ViteDevServer } from "vite";
 import { ViteNodeRunner } from "vite-node/client";
 import { ViteNodeServer } from "vite-node/server";
 
+import { AppError } from "./error-handler.js";
+
 export default async (viteServer: ViteDevServer, script: string) => {
-  if (!script) {
-    console.log(chalk.red("File path not specified"));
-    return;
-  }
+  if (!script) throw new AppError("File path not specified", true);
 
   await viteServer.pluginContainer.buildStart({});
 
