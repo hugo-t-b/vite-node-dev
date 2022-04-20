@@ -8,7 +8,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "vitest"
+    "test": "vitest --run",
+    "test:dev": "vitest --watch"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@types/app-root-path": "^1.2.4",
     "@types/node": "^17.0.24",
+    "c8": "^7.11.0",
     "typescript": "^4.6.3",
     "vitest": "^0.9.3"
   },
