@@ -1,26 +1,20 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@types/app-root-path': ^1.2.4
   '@types/node': ^17.0.24
-  app-root-path: ^3.0.0
   c8: ^7.11.0
   chalk: ^5.0.1
-  node-watch: ^0.7.3
   typescript: ^4.6.3
   vite: ^2.9.5
   vite-node: ^0.9.3
   vitest: ^0.9.3
 
 dependencies:
-  app-root-path: 3.0.0
   chalk: 5.0.1
-  node-watch: 0.7.3
   vite: 2.9.5
   vite-node: 0.9.3
 
 devDependencies:
-  '@types/app-root-path': 1.2.4
   '@types/node': 17.0.24
   c8: 7.11.0
   typescript: 4.6.3
@@ -35,10 +29,6 @@ packages:
   /@istanbuljs/schema/0.1.3:
     resolution: {integrity: sha512-ZXRY4jNvVgSVQ8DL3LTcakaAtXwTVUxE81hslsyD2AtoXW/wVob10HkOJ1X/pAlcI7D+2YoZKg5do8G/w6RYgA==}
     engines: {node: '>=8'}
-    dev: true
-
-  /@types/app-root-path/1.2.4:
-    resolution: {integrity: sha1-p4twMoKzKsVN52j1US7MNWmRncc=}
     dev: true
 
   /@types/chai-subset/1.3.3:
@@ -70,11 +60,6 @@ packages:
     dependencies:
       color-convert: 2.0.1
     dev: true
-
-  /app-root-path/3.0.0:
-    resolution: {integrity: sha512-qMcx+Gy2UZynHjOHOIXPNvpf+9cjvk3cWrBBK7zg4gH9+clobJRb9NGzcT7mQTcV/6Gm/1WelUtqxVXnNlrwcw==}
-    engines: {node: '>= 6.0.0'}
-    dev: false
 
   /assertion-error/1.1.0:
     resolution: {integrity: sha512-jgsaNduz+ndvGyFt3uSuWqvy4lCnIJiovtouQN5JZHOKCS2QuhEdbcQHFhVksz2N2U9hXJo8odG7ETyWlEeuDw==}
@@ -543,11 +528,6 @@ packages:
     resolution: {integrity: sha512-CuHBogktKwpm5g2sRgv83jEy2ijFzBwMoYA60orPDR7ynsLijJDqgsi4RDGj3OJpy3Ieb+LYwiRmIOGyytgITA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
-
-  /node-watch/0.7.3:
-    resolution: {integrity: sha512-3l4E8uMPY1HdMMryPRUAl+oIHtXtyiTlIiESNSVSNxcPfzAFzeTbXFQkZfAwBbo0B1qMSG8nUABx+Gd+YrbKrQ==}
-    engines: {node: '>=6'}
-    dev: false
 
   /once/1.4.0:
     resolution: {integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=}
