@@ -5,7 +5,9 @@ import { ViteNodeServer } from "vite-node/server";
 import { AppError } from "./error-handler.js";
 
 export default async (viteServer: ViteDevServer, script: string) => {
-  if (!script) throw new AppError("File path not specified", true);
+  if (!script) {
+    throw new AppError("File path not specified", true);
+  }
 
   await viteServer.pluginContainer.buildStart({});
 

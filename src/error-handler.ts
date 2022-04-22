@@ -12,11 +12,18 @@ export class AppError extends Error {
 export default (error?: unknown) => {
   let message = "An error occurred";
 
-  if (typeof error === "string") message = error;
-  if (error instanceof Error) message = error.message;
+  if (typeof error === "string") {
+    message = error;
+  }
+  
+  if (error instanceof Error) {
+    message = error.message;
+  }
 
   const formattedMessage = chalk.red(message);
   console.log(formattedMessage);
 
-  if (error instanceof AppError && error.quit) process.exit();
+  if (error instanceof AppError && error.quit) {
+    process.exit();
+  }
 };
