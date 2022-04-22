@@ -6,7 +6,7 @@ import { createServer } from "vite";
 
 vi.mock("vite", () => {
   return {
-    createServer: () => {
+    createServer() {
       return {
         config: {
           root: "",
