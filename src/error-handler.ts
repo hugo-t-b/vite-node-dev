@@ -17,7 +17,7 @@ export default (error?: unknown) => {
   }
   
   if (error instanceof Error) {
-    message = error.message;
+    ({ message } = error);
   }
 
   const formattedMessage = chalk.red(message);
