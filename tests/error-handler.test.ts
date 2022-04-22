@@ -15,7 +15,7 @@ describe("Error handler function", () => {
     errorHandler(1);
     errorHandler(true);
     errorHandler([]);
-    errorHandler(new Error);
+    errorHandler(new Error());
     errorHandler(null);
 
     expect(spy).toHaveBeenCalledTimes(7);
