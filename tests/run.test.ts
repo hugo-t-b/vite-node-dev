@@ -14,7 +14,7 @@ vi.mock("vite", () => {
         },
 
         pluginContainer: {
-          buildStart: () => void(0)
+          buildStart: () => void 0
         }
       };
     }
@@ -37,8 +37,8 @@ vi.mock("vite-node/server", () => {
   return {
     ViteNodeServer: vi.fn(() => {
       return {
-        fetchModule: () => void(0),
-        resolveId: () => void(0)
+        fetchModule: () => void 0,
+        resolveId: () => void 0
       };
     })
   };
