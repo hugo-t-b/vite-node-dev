@@ -7,7 +7,9 @@ import runScript from "./run.js";
 
 const main = async () => {
   let server = await createServer();
-  const script = process.argv[2];
+
+  const scriptArgument = 2;
+  const script = process.argv[scriptArgument];
   
   const run = async () => {
     try {
