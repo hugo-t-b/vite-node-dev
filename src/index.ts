@@ -18,10 +18,12 @@ const main = async () => {
   };
 
   const rerun = async () => {
+    const newServer = await createServer();
+    
     server.close();
-    server = await createServer();
+    newServer.watcher.on("all", rerun);
+    server = newServer;
 
-    server.watcher.on("all", rerun);
     run();
   };
 
