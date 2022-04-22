@@ -14,7 +14,7 @@ const main = async () => {
   const run = async () => {
     try {
       await runScript(server, script);
-    } catch(error) {
+    } catch (error) {
       errorHandler(error);
     }
   };
