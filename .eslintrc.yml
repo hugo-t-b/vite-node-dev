@@ -1,0 +1,214 @@
+env:
+  es2021: true
+  node: true
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/recommended
+parser: "@typescript-eslint/parser"
+parserOptions:
+  sourceType: module
+plugins:
+  - "@typescript-eslint"
+rules:
+  accessor-pairs: error
+  array-bracket-newline: warn
+  array-bracket-spacing:
+    - warn
+    - always
+  array-callback-return: error
+  array-element-newline: warn
+  arrow-body-style:
+    - warn
+    - as-needed
+    -
+      requireReturnForObjectLiteral: true
+  arrow-parens:
+    - warn
+    - as-needed
+  arrow-spacing: warn
+  block-spacing: warn
+  brace-style: warn
+  camelcase: warn
+  class-methods-use-this: error
+  comma-dangle: warn
+  comma-spacing: warn
+  comma-style: warn
+  computed-property-spacing: warn
+  consistent-return: error
+  curly: warn
+  default-case-last: error
+  default-param-last: error
+  dot-location:
+    - warn
+    - property
+  dot-notation: warn
+  eol-last: warn
+  eqeqeq: error
+  func-call-spacing: warn
+  func-names:
+    - warn
+    - never
+  func-style: warn
+  function-call-argument-newline:
+    - warn
+    - consistent
+  generator-star-spacing:
+    - warn
+    -
+      before: false
+      after: true
+  grouped-accessor-pairs:
+    - warn
+    - getBeforeSet
+  guard-for-in: error
+  implicit-arrow-linebreak: warn
+  indent:
+    - warn
+    - 2
+  init-declarations: error
+  key-spacing: warn
+  keyword-spacing: warn
+  linebreak-style: warn
+  lines-between-class-members:
+    - warn
+    - always
+    -
+      exceptAfterSingleLine: true
+  multiline-ternary:
+    - warn
+    - always-multiline
+  new-cap: warn
+  new-parens: warn
+  newline-per-chained-call: warn
+  no-array-constructor: warn
+  no-bitwise: error
+  no-confusing-arrow:
+    - warn
+    -
+      onlyOneSimpleParam: true
+  no-constructor-return: error
+  no-duplicate-imports: warn
+  no-else-return:
+    - warn
+    -
+      allowElseIf: false
+  no-empty-function: warn
+  no-eval: error
+  no-extend-native: error
+  no-extra-bind: warn
+  no-extra-label: warn
+  no-extra-parens: warn
+  no-floating-decimal: warn
+  no-implicit-coercion: warn
+  no-implied-eval: error
+  no-invalid-this: error
+  no-label-var: error
+  no-lonely-if: warn
+  no-magic-numbers:
+    - warn
+    -
+      ignoreDefaultValues: true
+  no-mixed-operators: warn
+  no-multi-assign: warn
+  no-multi-spaces: warn
+  no-multi-str: warn
+  no-multiple-empty-lines:
+    - warn
+    -
+      max: 1
+  no-nested-ternary: warn
+  no-new: warn
+  no-new-func: error
+  no-new-object: warn
+  no-new-wrappers: warn
+  no-octal-escape: warn
+  no-param-reassign: error
+  no-promise-executor-return: error
+  no-return-assign: error
+  no-return-await: warn
+  no-self-compare: error
+  no-sequences: error
+  no-shadow: error
+  no-template-curly-in-string: warn
+  no-throw-literal: error
+  no-trailing-spaces: warn
+  no-undef-init: warn
+  no-undefined: error
+  no-underscore-dangle: warn
+  no-unmodified-loop-condition: error
+  no-unneeded-ternary: warn
+  no-unreachable-loop: error
+  no-unused-expressions: warn
+  no-unused-private-class-members: warn
+  no-useless-call: warn
+  no-useless-computed-key: warn
+  no-useless-constructor: warn
+  no-useless-rename: warn
+  no-useless-return: warn
+  no-var: error
+  no-whitespace-before-property: warn
+  object-curly-newline:
+    - warn
+    -
+      ExportDeclaration:
+        multiline: true
+      ImportDeclaration: never
+      ObjectExpression:
+        minProperties: 1
+      ObjectPattern: never
+  object-curly-spacing:
+    - warn
+    - always
+  object-property-newline: warn
+  object-shorthand:
+    - warn
+    - always
+    -
+      avoidExplicitReturnArrows: true
+  one-var:
+    - warn
+    - never
+  operator-assignment: warn
+  operator-linebreak:
+    - warn
+    - before
+  padded-blocks:
+    - warn
+    - never
+  prefer-arrow-callback: warn
+  prefer-const: warn
+  prefer-destructuring: warn
+  prefer-exponentiation-operator: warn
+  prefer-numeric-literals: warn
+  prefer-object-spread: warn
+  prefer-promise-reject-errors: error
+  prefer-regex-literals: warn
+  prefer-rest-params: error
+  prefer-spread: warn
+  prefer-template: warn
+  quote-props:
+    - warn
+    - as-needed
+  quotes: warn
+  require-atomic-updates: error
+  require-await: warn
+  rest-spread-spacing: warn
+  semi: warn
+  semi-spacing: warn
+  semi-style: warn
+  sort-keys: warn
+  space-before-function-paren:
+    - warn
+    -
+      anonymous: always
+      named: never
+      asyncArrow: always
+  space-in-parens: warn
+  space-infix-ops: warn
+  space-unary-ops: warn
+  strict: error
+  switch-colon-spacing: warn
+  template-curly-spacing: warn
+  template-tag-spacing: warn
+  yield-star-spacing: warn
+  yoda: warn

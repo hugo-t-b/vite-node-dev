@@ -1,0 +1,11 @@
+rules:
+  no-magic-numbers: off
+  object-curly-newline:
+    - warn
+    -
+      ExportDeclaration:
+        multiline: true
+      ImportDeclaration: never
+      ObjectExpression:
+        consistent: true
+      ObjectPattern: never
