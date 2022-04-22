@@ -7,7 +7,7 @@ export class AppError extends Error {
     super(message);
     this.quit = quit;
   }
-};
+}
 
 export default (error?: unknown) => {
   let message = "An error occurred";
