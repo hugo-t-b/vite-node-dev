@@ -9,8 +9,8 @@ vi.mock("vite", () => {
     createServer() {
       return {
         config: {
-          root: "",
-          base: ""
+          base: "",
+          root: ""
         },
 
         pluginContainer: {

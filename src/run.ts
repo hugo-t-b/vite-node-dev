@@ -14,16 +14,17 @@ export default async (viteServer: ViteDevServer, script: string) => {
   const nodeServer = new ViteNodeServer(viteServer);
 
   const runner = new ViteNodeRunner({
-    root: viteServer.config.root,
     base: viteServer.config.base,
-  
+
     fetchModule(id) {
       return nodeServer.fetchModule(id);
     },
 
     resolveId(id, importer) {
       return nodeServer.resolveId(id, importer);
-    }
+    },
+
+    root: viteServer.config.root
   });
 
   runner.executeFile(script);
