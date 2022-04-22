@@ -15,7 +15,7 @@ export default (error?: unknown) => {
   if (typeof error === "string") {
     message = error;
   }
-  
+
   if (error instanceof Error) {
     ({ message } = error);
   }

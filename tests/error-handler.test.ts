@@ -24,13 +24,13 @@ describe("Error handler function", () => {
   it("Exits the process when requested", () => {
     vi.spyOn(console, "log").mockImplementation(() => void 0);
     const spy = vi.spyOn(process, "exit").mockImplementation(() => void 0);
-    
+
     errorHandler();
     expect(spy).not.toHaveBeenCalled();
 
     errorHandler(1);
     expect(spy).not.toHaveBeenCalled();
-    
+
     errorHandler("");
     expect(spy).not.toHaveBeenCalled();
 

@@ -10,7 +10,7 @@ const main = async () => {
 
   const scriptArgument = 2;
   const script = process.argv[scriptArgument];
-  
+
   const run = async () => {
     try {
       await runScript(server, script);
@@ -21,7 +21,7 @@ const main = async () => {
 
   const rerun = async () => {
     const newServer = await createServer();
-    
+
     server.close();
     newServer.watcher.on("all", rerun);
     server = newServer;
