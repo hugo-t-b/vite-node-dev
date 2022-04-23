@@ -1,0 +1,20 @@
+name: CI
+on:
+  - push
+jobs:
+  eslint:
+    name: Lint code
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout code
+        uses: actions/checkout@v2
+      -
+        name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
+      -
+        name: Install dependencies
+        run: pnpm install
+      -
+        name: Run eslint
+        run: pnpm lint
