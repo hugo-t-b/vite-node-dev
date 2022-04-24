@@ -7,6 +7,7 @@
     "vite-node-dev": "./dist/index.js"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "build": "tsc",
     "lint": "eslint src/**/*.ts tests/**/*.ts",
     "test": "vitest --run",
