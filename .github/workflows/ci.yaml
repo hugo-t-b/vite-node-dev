@@ -2,7 +2,7 @@ name: CI
 on:
   - push
 jobs:
-  eslint:
+  lint:
     name: Lint code
     runs-on: ubuntu-latest
     steps:
@@ -26,7 +26,7 @@ jobs:
       -
         name: Run eslint
         run: pnpm lint
-  vitest:
+  test:
     name: Run tests
     runs-on: ubuntu-latest
     steps:
