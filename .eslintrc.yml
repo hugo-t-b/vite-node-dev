@@ -11,7 +11,11 @@ plugins:
   - "@typescript-eslint"
 rules:
   accessor-pairs: error
-  array-bracket-newline: error
+  array-bracket-newline:
+    - error
+    -
+      minItems: 1
+      multiline: false
   array-bracket-spacing:
     - error
     - always
