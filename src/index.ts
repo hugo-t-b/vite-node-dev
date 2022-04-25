@@ -1,36 +1,30 @@
 #!/usr/bin/env node
 
-import { createServer } from "vite";
-
 import errorHandler from "./error-handler.js";
-import runScript from "./run.js";
+import runScript, { createViteNodeRunner, createViteNodeServer, createViteServer } from "./run.js";
 
 const main = async () => {
-  let server = await createServer();
+  const viteServer = await createViteServer();
+  const viteNodeServer = createViteNodeServer(viteServer);
+  let viteNodeRunner = createViteNodeRunner(viteServer, viteNodeServer);
 
   const scriptArgument = 2;
   const script = process.argv[scriptArgument];
 
-  const run = async () => {
+  const run = () => {
     try {
-      await runScript(server, script);
+      runScript(script, viteNodeRunner);
     } catch (error) {
       errorHandler(error);
     }
   };
 
-  const rerun = async () => {
-    const newServer = await createServer();
-
-    server.close();
-    newServer.watcher.on("all", rerun);
-    server = newServer;
-
-    run();
-  };
-
   run();
-  server.watcher.on("all", rerun);
+
+  viteServer.watcher.on("all", () => {
+    viteNodeRunner = createViteNodeRunner(viteServer, viteNodeServer);
+    run();
+  });
 };
 
 main();

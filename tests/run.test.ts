@@ -2,24 +2,8 @@ import { describe, expect, it, vi } from "vitest";
 import run from "../src/run";
 
 import { AppError } from "../src/error-handler";
-import { createServer } from "vite";
-
-vi.mock("vite", () => {
-  return {
-    createServer() {
-      return {
-        config: {
-          base: "",
-          root: ""
-        },
-
-        pluginContainer: {
-          buildStart: () => void 0
-        }
-      };
-    }
-  };
-});
+import { ViteNodeRunner } from "vite-node/client";
+import { ViteNodeRunnerOptions } from "vite-node";
 
 const executeFileSpy = vi.fn();
 
@@ -33,30 +17,16 @@ vi.mock("vite-node/client", () => {
   };
 });
 
-vi.mock("vite-node/server", () => {
-  return {
-    ViteNodeServer: vi.fn(() => {
-      return {
-        fetchModule: () => void 0,
-        resolveId: () => void 0
-      };
-    })
-  };
-});
-
 describe("Run function", () => {
-  it("Throws when the script is not specified", async () => {
-    await expect(run).rejects.toBeInstanceOf(AppError);
-    await expect(run).rejects.toHaveProperty("quit", true);
-  });
+  it("Throws when the script is not specified", () => expect(run).toThrow(AppError));
 
-  it("Runs the file with vite-node", async () => {
-    const server = await createServer();
-    const buildStartSpy = vi.spyOn(server.pluginContainer, "buildStart");
+  it("Runs the file with vite-node", () => {
+    const viteNodeRunnerOptions: ViteNodeRunnerOptions = {
+      fetchModule: () => void 0,
+      root: ""
+    };
 
-    await run(server, "index.js");
-
-    expect(buildStartSpy).toHaveBeenCalledOnce();
+    run("index.js", new ViteNodeRunner(viteNodeRunnerOptions));
     expect(executeFileSpy).toHaveBeenNthCalledWith(1, "index.js");
   });
 });
