@@ -2,6 +2,30 @@ name: CI
 on:
   - push
 jobs:
+  commit:
+    name: Lint commit message
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout code
+        uses: actions/checkout@v3
+      -e
+        name: Install pnpm
+        uses: pnpm/action-setup@v2.2.1
+        with:
+          version: 6
+      -
+        name: Install Node 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "pnpm"
+      -
+        name: Install dependencies
+        run: pnpm install
+      -
+        name: Run commitlint
+        run: pnpm commitlint --from ${{ github.event.commits[0].sha }} --to ${{ github.event.head_commit.sha }} --verbose
   lint:
     name: Lint code
     runs-on: ubuntu-latest
