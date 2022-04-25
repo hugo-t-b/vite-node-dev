@@ -25,6 +25,7 @@ const commitlintConfig = {
         "fix",
         "perf",
         "refactor",
+        "release",
         "revert",
         "style",
         "test",
