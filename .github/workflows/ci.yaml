@@ -9,7 +9,7 @@ jobs:
       -
         name: Checkout code
         uses: actions/checkout@v3
-      -e
+      -
         name: Install pnpm
         uses: pnpm/action-setup@v2.2.1
         with:
