@@ -33,7 +33,6 @@ const commitlintConfig = {
       ]
     ]
   }
-  // TODO: configure to match commit style
 };
 
 module.exports = commitlintConfig;
