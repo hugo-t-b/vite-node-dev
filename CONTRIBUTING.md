@@ -20,7 +20,7 @@ Help us keep vite-node-dev open and inclusive. Please read and follow our [Code 
 
 ## Questions and Problems
 
-Do not open issues for general support questions as we want to keep GitHub issues for bug reports and feature requests. To save your and our time, we will systematically close all issues that are requests for general support.
+Do not open issues for general support questions as we want to keep GitHub issues for bug reports and feature requests. Instead, we recommend using [GitHub discussions](https://github.com/hugo-t-b/vite-node-dev/discussions) to ask support-related questions. To save your and our time, we will systematically close all issues that are requests for general support and redirect people to GitHub discussions.
 
 ## Bugs
 

@@ -39,7 +39,7 @@ body:
           label: Check that an [issue](https://github.com/hugo-t-b/vite-node-dev/issues) that reports this bug hasn't already been created. 
           required: true
         -
-          label: Check that this is a concrete bug, not a general support question.
+          label: Check that this is a concrete bug. For general support questions, open a [GitHub discussion](https://github.com/hugo-t-b/vite-node-dev/discussions).
           required: true
         -
           label: Check that the provided reproduction is a [minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example)
