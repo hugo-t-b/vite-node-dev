@@ -34,11 +34,5 @@ body:
           label: Read and follow our [Contributing Guidelines](https://github.com/hugo-t-b/vite-node-dev/blob/main/CONTRIBUTING.md)
           required: true
         -
-          label: Check that an [issue](https://github.com/hugo-t-b/vite-node-dev/issues) that reports this bug hasn't already been created. 
-          required: true
-        -
-          label: Check that this is a concrete bug, not a general support question.
-          required: true
-        -
-          label: Check that the provided reproduction is a [minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example)
+          label: Check that an [issue](https://github.com/hugo-t-b/vite-node-dev/issues) that proposes this feature hasn't already been created. 
           required: true
