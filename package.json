@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "description": "Run Node scripts with vite-node and reload them when they are changed.",
   "type": "module",
+  "packageManager": "pnpm@7.0.0",
   "bin": {
     "vite-node-dev": "./dist/index.js"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
     "build": "tsc",
     "lint": "eslint src/**/*.ts tests/**/*.ts",
