@@ -119,6 +119,8 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
     pnpm lint -- --fix
     ```
 
+* Always use [pnpm](https://pnpm.io) to install dependencies.
+
 ## Commit Message Format
 
 We have very precise rules over how our Git commit messages must be formatted, which leads to an easier to read commit history. Many of these rules are enforced by [commitlint](https://commitlint.js.org/).
