@@ -1,0 +1,46 @@
+name: Bug report
+description: Report an issue with vite-node-dev 
+labels:
+  - triage
+body:
+  -
+    type: markdown
+    attributes:
+      value: Thanks for taking the time to fill out this bug report!
+  -
+    type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is. If you intend to submit a pull request for this issue, please tell us in the description. Thanks!
+      placeholder: Description of the bug
+    validations:
+      required: true
+  -
+    type: input
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Please provide a link to a [minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example) on [StackBlitz](https://stackblitz.com/) or a GitHub repository.
+      placeholder: Link to StackBlitz or GitHub
+    validations:
+      required: true
+  -
+    type: checkboxes
+    id: validations
+    attributes:
+      label: Validations
+      description: Before submitting your issue, please do the following.
+      options:
+        -
+          label: Read and follow our [Contributing Guidelines](https://github.com/hugo-t-b/vite-node-dev/blob/main/CONTRIBUTING.md)
+          required: true
+        -
+          label: Check that an [issue](https://github.com/hugo-t-b/vite-node-dev/issues) that reports this bug hasn't already been created. 
+          required: true
+        -
+          label: Check that this is a concrete bug, not a general support question.
+          required: true
+        -
+          label: Check that the provided reproduction is a [minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example)
+          required: true

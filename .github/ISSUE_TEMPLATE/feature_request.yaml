@@ -1,0 +1,44 @@
+name: Feature request
+description: Propose a new feature to be added to vite-node-dev 
+labels:
+  - triage
+body:
+  -
+    type: markdown
+    attributes:
+      value: Thanks for taking the time to fill out this feature request!
+  -
+    type: textarea
+    id: feature-description
+    attributes:
+      label: Describe the proposed feature
+      description: A clear and concise description of the proposed feature. If you intend to submit a pull request for this issue, please tell us in the description. Thanks!
+      placeholder: Description of the feature
+    validations:
+      required: true
+  -
+    type: textarea
+    id: solution
+    attributes:
+      label: Solution(s)
+      description: If you have ideas on how this feature could be implemented, tell us here.
+      placeholder: Description of your idea(s)
+  -
+    type: checkboxes
+    id: validations
+    attributes:
+      label: Validations
+      description: Before submitting your issue, please do the following.
+      options:
+        -
+          label: Read and follow our [Contributing Guidelines](https://github.com/hugo-t-b/vite-node-dev/blob/main/CONTRIBUTING.md)
+          required: true
+        -
+          label: Check that an [issue](https://github.com/hugo-t-b/vite-node-dev/issues) that reports this bug hasn't already been created. 
+          required: true
+        -
+          label: Check that this is a concrete bug, not a general support question.
+          required: true
+        -
+          label: Check that the provided reproduction is a [minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example)
+          required: true
