@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.0
+* Allow the user to restart the script by typing "rs"
+
 ## 0.1.0
 * Performance improvements
 
