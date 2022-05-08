@@ -8,7 +8,7 @@ describe("Error handler function", () => {
   });
 
   it("Logs the message to the console", () => {
-    const spy = vi.spyOn(console, "log").mockImplementation(() => void 0);
+    const spy = vi.spyOn(console, "log").mockImplementation(() => undefined);
 
     errorHandler();
     errorHandler("");
@@ -22,8 +22,8 @@ describe("Error handler function", () => {
   });
 
   it("Exits the process when requested", () => {
-    vi.spyOn(console, "log").mockImplementation(() => void 0);
-    const spy = vi.spyOn(process, "exit").mockImplementation(() => void 0);
+    vi.spyOn(console, "log").mockImplementation(() => undefined);
+    const spy = vi.spyOn(process, "exit").mockImplementation(() => undefined);
 
     errorHandler();
     expect(spy).not.toHaveBeenCalled();

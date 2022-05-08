@@ -22,7 +22,7 @@ describe("Run function", () => {
 
   it("Runs the file with vite-node", () => {
     const viteNodeRunnerOptions: ViteNodeRunnerOptions = {
-      fetchModule: () => void 0,
+      fetchModule: () => undefined,
       root: ""
     };
 
