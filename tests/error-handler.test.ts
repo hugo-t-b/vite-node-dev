@@ -53,8 +53,7 @@ describe("AppError class", () => {
     const instance = new AppError("");
 
     expect(instance).toBeInstanceOf(Error);
-    expect(instance).toHaveProperty("message");
-    expect(typeof instance.message).toBe("string");
+    expect(instance.message).toBeTypeOf("string");
   });
 
   it("Message property is set to the message", () => {
