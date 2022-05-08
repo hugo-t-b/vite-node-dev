@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import errorHandler from "./error-handler.js";
+import listenForInput from "./input.js";
 import runScript, { createViteNodeRunner, createViteNodeServer, createViteServer } from "./run.js";
 
 const main = async () => {
@@ -19,11 +20,19 @@ const main = async () => {
     }
   };
 
-  run();
-
-  viteServer.watcher.on("all", () => {
+  const rerun = () => {
+    console.clear();
     viteNodeRunner = createViteNodeRunner(viteServer, viteNodeServer);
     run();
+  };
+
+  run();
+  viteServer.watcher.on("all", rerun);
+
+  listenForInput(input => {
+    if (input === "rs") {
+      rerun();
+    }
   });
 };
 
