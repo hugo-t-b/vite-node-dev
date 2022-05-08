@@ -21,11 +21,6 @@ rules:
     - always
   array-callback-return: error
   array-element-newline: error
-  arrow-body-style:
-    - error
-    - as-needed
-    -
-      requireReturnForObjectLiteral: true
   arrow-parens:
     - error
     - as-needed
