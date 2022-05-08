@@ -1,4 +1,9 @@
+.eslintrc.yml
+.github
+.husky
+.vscode
+commitlint.config.cjs
+coverage
 src
 tests
-coverage
 tsconfig.json
