@@ -20,6 +20,8 @@ npm install --global vite-node-dev
 
 ## Usage
 
+### Running a Script
+
 To run a script with vite-node-dev, type `vite-node-dev` followed by the name of the file. If it is installed locally, prefix the command with `npx`.
 
 ```bash
@@ -34,6 +36,10 @@ You might want to add a script for this command to your project's `package.json`
   "dev": "vite-node-dev index.js" // You can omit the npx prefix inside a script
 }
 ```
+
+### Manually Restarting a Running Script
+
+To manually restart a running script without quitting vite-node-dev, type `rs` and hit `enter`.
 
 ## License
 
