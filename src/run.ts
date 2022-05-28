@@ -1,4 +1,5 @@
-import { createServer, ViteDevServer } from "vite";
+import { createServer } from "vite";
+import type { ViteDevServer } from "vite";
 import { ViteNodeRunner } from "vite-node/client";
 import { ViteNodeServer } from "vite-node/server";
 
@@ -32,5 +33,11 @@ export default (script: string, runner: ViteNodeRunner) => {
     throw new AppError("File path not specified", true);
   }
 
-  runner.executeFile(script);
+  runner.executeFile(script).catch(error => {
+    if (typeof error === "string") {
+      throw new AppError(error);
+    }
+
+    throw error;
+  });
 };
