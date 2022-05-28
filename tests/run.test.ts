@@ -5,7 +5,7 @@ import { AppError } from "../src/error-handler";
 import { ViteNodeRunner } from "vite-node/client";
 import type { ViteNodeRunnerOptions } from "vite-node";
 
-const executeFileSpy = vi.fn();
+const executeFileSpy = vi.fn(() => new Promise(() => {}));
 
 vi.mock("vite-node/client", () => {
   return {
