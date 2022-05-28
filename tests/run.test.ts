@@ -3,7 +3,7 @@ import run from "../src/run";
 
 import { AppError } from "../src/error-handler";
 import { ViteNodeRunner } from "vite-node/client";
-import { ViteNodeRunnerOptions } from "vite-node";
+import type { ViteNodeRunnerOptions } from "vite-node";
 
 const executeFileSpy = vi.fn();
 
@@ -22,7 +22,7 @@ describe("Run function", () => {
 
   it("Runs the file with vite-node", () => {
     const viteNodeRunnerOptions: ViteNodeRunnerOptions = {
-      fetchModule: () => undefined,
+      fetchModule: () => new Promise(() => {}),
       root: ""
     };
 
