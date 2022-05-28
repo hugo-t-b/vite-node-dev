@@ -74,8 +74,8 @@ jobs:
       -
         name: Run vitest
         run: pnpm test
-  build:
-    name: Run build
+  typecheck:
+    name: Typecheck
     runs-on: ubuntu-latest
     steps:
       -
@@ -96,5 +96,5 @@ jobs:
         name: Install dependencies
         run: pnpm install
       -
-        name: Run tsc
-        run: pnpm build
+        name: Run typechecks
+        run: pnpm typecheck
