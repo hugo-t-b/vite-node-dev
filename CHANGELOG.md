@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1
+* Document the manual restart feature (see below)
+* Improve handling of errors thrown by the vite-node runner
+* Code formatting improvements
+
 ## 0.2.0
 * Allow the user to restart the script by typing "rs"
 
