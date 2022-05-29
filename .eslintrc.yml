@@ -1,3 +1,4 @@
+root: true
 extends: "@hugo-t-b/eslint-config/typescript"
 settings:
   import/core-modules:
