@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.2.1 (2022-05-29)
+## [0.2.1](https://github.com/hugo-t-b/vite-node-dev/releases/tag/v0.2.1) (2022-05-29)
 * Document the manual restart feature (see below)
 * Improve handling of errors thrown by the vite-node runner
 * Code formatting improvements
