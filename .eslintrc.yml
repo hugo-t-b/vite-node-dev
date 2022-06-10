@@ -1,5 +1,7 @@
 root: true
 extends: "@hugo-t-b/eslint-config/typescript"
+ignorePatterns:
+  - dist
 settings:
   import/core-modules:
     - vite-node/client
