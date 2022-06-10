@@ -6,12 +6,6 @@ const commitlintConfig = {
   ],
 
   rules: {
-    "subject-case": [
-      error,
-      "always",
-      "sentence-case"
-    ],
-
     "type-enum": [
       error,
       "always",
