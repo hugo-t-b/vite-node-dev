@@ -20,7 +20,7 @@ updates:
     schedule:
       interval: monthly
     commit-message:
-      prefix: chore
+      prefix: ci
     pull-request-branch-name:
       separator: "-"
     assignees:
