@@ -6,6 +6,27 @@ const commitlintConfig = {
   ],
 
   rules: {
+    "scope-enum": [
+      error,
+      "always",
+
+      [
+        "changelog",
+        "code-of-conduct",
+        "commitlint",
+        "contributing",
+        "dependencies",
+        "editors",
+        "error-handler",
+        "license",
+        "lint",
+        "npm",
+        "readme",
+        "repo",
+        "run"
+      ]
+    ],
+
     "type-enum": [
       error,
       "always",
