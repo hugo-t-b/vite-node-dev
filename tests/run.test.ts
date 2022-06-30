@@ -1,7 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import run from "../src/run";
 
-import { AppError } from "../src/error-handler";
 import { ViteNodeRunner } from "vite-node/client";
 import type { ViteNodeRunnerOptions } from "vite-node";
 
@@ -18,8 +17,6 @@ vi.mock("vite-node/client", () => {
 });
 
 describe("Run function", () => {
-  it("Throws when the script is not specified", () => expect(run).toThrow(AppError));
-
   it("Runs the file with vite-node", () => {
     const viteNodeRunnerOptions: ViteNodeRunnerOptions = {
       fetchModule: () => new Promise(() => {}),

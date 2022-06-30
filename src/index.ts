@@ -1,24 +1,29 @@
 #!/usr/bin/env node
 
+import { program } from "commander";
+
+import type { CLIOptions } from "./types.js";
 import errorHandler from "./error-handler.js";
 import listenForInput from "./input.js";
 import runScript, { createViteNodeRunner, createViteNodeServer, createViteServer } from "./run.js";
 
-const main = async () => {
+const main = async (script: string, options: CLIOptions) => {
   const viteServer = await createViteServer();
   const viteNodeServer = createViteNodeServer(viteServer);
   let viteNodeRunner = createViteNodeRunner(viteServer, viteNodeServer);
 
-  const scriptArgument = 2;
-  const script = process.argv[scriptArgument];
-
-  const run = () => {
+  const run = async () => {
     try {
-      runScript(script, viteNodeRunner);
+      await runScript(script, viteNodeRunner);
     } catch (error) {
       errorHandler(error);
     }
   };
+
+  if (options.run) {
+    await run();
+    process.exit();
+  }
 
   const rerun = () => {
     console.clear();
@@ -36,4 +41,11 @@ const main = async () => {
   });
 };
 
-main().catch(errorHandler);
+program.name("vite-node-dev");
+
+program
+  .argument("<file>")
+  .option("-r, --run")
+  .action(main);
+
+program.parse();

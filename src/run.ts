@@ -28,16 +28,22 @@ export const createViteNodeRunner = (viteServer: ViteDevServer, viteNodeServer: 
   root: viteServer.config.root
 });
 
-export default (script: string, runner: ViteNodeRunner) => {
+export default async (script: string, runner: ViteNodeRunner) => {
   if (!script) {
     throw new AppError("File path not specified", true);
   }
 
-  runner.executeFile(script).catch(error => {
+  try {
+    await runner.executeFile(script);
+  } catch (error) {
     if (typeof error === "string") {
       throw new AppError(error);
     }
 
+    if (error instanceof Error) {
+      throw new AppError(error.message);
+    }
+
     throw error;
-  });
+  }
 };

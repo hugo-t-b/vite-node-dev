@@ -6,15 +6,6 @@ describe("Input listener", () => {
     vi.restoreAllMocks();
   });
 
-  it("Calls the callback function when data is entered", () => {
-    const spy = vi.fn();
-
-    inputListener(spy);
-    process.stdin.emit("data", Buffer.from(""));
-
-    expect(spy).toHaveBeenCalledOnce();
-  });
-
   it("Calls the callback function with the correct input", () => {
     const spy = vi.fn();
 
