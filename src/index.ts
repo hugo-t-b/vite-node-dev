@@ -47,7 +47,7 @@ program
 
 program
   .argument("<file>")
-  .option("-r, --run")
+  .option("-r, --run", "run a file without reloading")
   .action(main);
 
 program.parse();
