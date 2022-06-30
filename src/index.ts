@@ -11,9 +11,9 @@ const main = async (script: string) => {
   const viteNodeServer = createViteNodeServer(viteServer);
   let viteNodeRunner = createViteNodeRunner(viteServer, viteNodeServer);
 
-  const run = () => {
+  const run = async () => {
     try {
-      runScript(script, viteNodeRunner);
+      await runScript(script, viteNodeRunner);
     } catch (error) {
       errorHandler(error);
     }
