@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': ^17.0.3
   '@commitlint/config-conventional': ^17.0.3
-  '@hugo-t-b/eslint-config': ^1.4.1
+  '@hugo-t-b/eslint-config': ^1.4.2
   '@types/node': ^18.0.0
   '@typescript-eslint/eslint-plugin': ^5.30.0
   '@typescript-eslint/parser': ^5.30.0
@@ -28,7 +28,7 @@ dependencies:
 devDependencies:
   '@commitlint/cli': 17.0.3
   '@commitlint/config-conventional': 17.0.3
-  '@hugo-t-b/eslint-config': 1.4.1_cwkmdjvrpykrusmspbgm5kbfju
+  '@hugo-t-b/eslint-config': 1.4.2_cwkmdjvrpykrusmspbgm5kbfju
   '@types/node': 18.0.0
   '@typescript-eslint/eslint-plugin': 5.30.0_5mtqsiui4sk53pmkx7i7ue45wm
   '@typescript-eslint/parser': 5.30.0_b5e7v2qnwxfo6hmiq56u52mz3e
@@ -251,8 +251,8 @@ packages:
       - supports-color
     dev: true
 
-  /@hugo-t-b/eslint-config/1.4.1_cwkmdjvrpykrusmspbgm5kbfju:
-    resolution: {integrity: sha512-K525KoJhHA/O7/psopxxytWNAereOHcs3UO8SxIAsx2IrSjj4rytNLf803cRDUFSdlhbrcGeB3lTFHfq+IM2mw==}
+  /@hugo-t-b/eslint-config/1.4.2_cwkmdjvrpykrusmspbgm5kbfju:
+    resolution: {integrity: sha512-GgUdfx0wnMWf2AOsHsUtdJNwYpUoIITTspN4t2WhLrTXS3bCmqZKVR4q5bD1IaSTVBqMkbL796susfs9FRR2kA==}
     requiresBuild: true
     peerDependencies:
       '@typescript-eslint/eslint-plugin': 5.x.x
