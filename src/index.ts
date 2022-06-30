@@ -41,7 +41,9 @@ const main = async (script: string, options: CLIOptions) => {
   });
 };
 
-program.name("vite-node-dev");
+program
+  .name("vite-node-dev")
+  .version("0.2.1");
 
 program
   .argument("<file>")
