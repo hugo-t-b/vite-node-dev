@@ -153,12 +153,12 @@ Must be one of the following:
 
 | Type(s) | Possible scopes | Rule |
 | --- | --- | --- |
-| `feat`, `fix`, `perf`, `refactor`, `style` | <ul><li>The names of the source files - `error-handler` and `run`</li><li>No scope</li></ul> | The name of the source file with significant changes. No scope if that is `index.ts` or if multiple files have significant changes. |
+| `feat`, `fix`, `perf`, `refactor`, `style` | <ul><li>The names of the source files - `error-handler`, `input`, `main`, `run`, and `types`</li><li>No scope</li></ul> | The name of the source file with significant changes. No scope if that is `index.ts` or if multiple files have significant changes. |
 | `chore`, `release`, `revert` | No scope | Never include a scope. |
 | `build` | <ul><li>`lint`</li><li>No scope</li></ul> | `lint` if the change affects the linter, otherwise no scope. |
 | `ci` | <ul><li>`commitlint`</li><li>No scope</li></ul> | `commitlint` if the change affects commitlint, otherwise no scope. |
 | `docs` | <ul><li>The names of the files containing documentation and community guidelines (e.g. `code-of-conduct`, `readme`)</li><li>No scope</li></ul> | No scope if feature documentation is changed, otherwise the name of the file with significant changes. |
-| `test` | <ul><li>The names of the source files - `error-handler` and `run`</li><li>No scope</li></ul> | The name of the source file that corresponds to the test with significant changes. No scope if multiple tests have significant changes. |
+| `test` | <ul><li>The names of the source files - `error-handler`, `input`, `main`, `run`, and `types`</li><li>No scope</li></ul> | The name of the source file that corresponds to the test with significant changes. No scope if multiple tests have significant changes. |
 | `workflow` | <ul><li>`dependencies`</li><li>`editors`</li><li>`npm`</li><li>`repo`</li></ul> | `npm` if the change affects how the package is published to npm; `dependencies` if it alters how the package manager functions; `repo` if it configures the GitHub repository; `editors` if it configures a code editor/IDE. |
 
 ### Breaking
