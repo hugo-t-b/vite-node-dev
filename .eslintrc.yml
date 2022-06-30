@@ -7,3 +7,5 @@ settings:
   import/core-modules:
     - vite-node/client
     - vite-node/server
+rules:
+  "@typescript-eslint/no-floating-promises": off
