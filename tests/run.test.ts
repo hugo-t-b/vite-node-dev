@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import run from "../src/run";
+import run from "../src/lib/run";
 
 import { ViteNodeRunner } from "vite-node/client";
 import type { ViteNodeRunnerOptions } from "vite-node";

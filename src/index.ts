@@ -2,10 +2,10 @@
 
 import { program } from "commander";
 
-import type { CLIOptions } from "./types.js";
-import errorHandler from "./error-handler.js";
-import listenForInput from "./input.js";
-import runScript, { createViteNodeRunner, createViteNodeServer, createViteServer } from "./run.js";
+import type { CLIOptions } from "./lib/types.js";
+import errorHandler from "./lib/error-handler.js";
+import listenForInput from "./lib/input.js";
+import runScript, { createViteNodeRunner, createViteNodeServer, createViteServer } from "./lib/run.js";
 
 const main = async (script: string, options: CLIOptions) => {
   const viteServer = await createViteServer();

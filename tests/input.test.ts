@@ -1,5 +1,5 @@
+import inputListener from "../src/lib/input";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import inputListener from "../src/input";
 
 describe("Input listener", () => {
   afterEach(() => {

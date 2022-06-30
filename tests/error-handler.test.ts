@@ -1,6 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-
-import errorHandler, { AppError } from "../src/error-handler";
+import errorHandler, { AppError } from "../src/lib/error-handler";
 
 describe("Error handler function", () => {
   afterEach(() => {
