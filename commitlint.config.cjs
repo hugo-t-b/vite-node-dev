@@ -18,13 +18,15 @@ const commitlintConfig = {
         "dependencies",
         "editors",
         "error-handler",
+        "input",
         "license",
         "lint",
         "main",
         "npm",
         "readme",
         "repo",
-        "run"
+        "run",
+        "types"
       ]
     ],
 
