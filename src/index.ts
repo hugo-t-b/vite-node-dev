@@ -1,16 +1,15 @@
 #!/usr/bin/env node
 
+import { program } from "commander";
+
 import errorHandler from "./error-handler.js";
 import listenForInput from "./input.js";
 import runScript, { createViteNodeRunner, createViteNodeServer, createViteServer } from "./run.js";
 
-const main = async () => {
+const main = async (script: string) => {
   const viteServer = await createViteServer();
   const viteNodeServer = createViteNodeServer(viteServer);
   let viteNodeRunner = createViteNodeRunner(viteServer, viteNodeServer);
-
-  const scriptArgument = 2;
-  const script = process.argv[scriptArgument];
 
   const run = () => {
     try {
@@ -36,4 +35,10 @@ const main = async () => {
   });
 };
 
-main().catch(errorHandler);
+program.name("vite-node-dev");
+
+program
+  .argument("<file>")
+  .action(main);
+
+program.parse();

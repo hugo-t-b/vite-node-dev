@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "chalk": "^5.0.1",
+    "commander": "^9.3.0",
     "vite": "^2.9.13",
     "vite-node": "^0.16.0"
   }
