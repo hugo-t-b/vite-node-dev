@@ -20,6 +20,7 @@ const commitlintConfig = {
         "error-handler",
         "license",
         "lint",
+        "main",
         "npm",
         "readme",
         "repo",
