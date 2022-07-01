@@ -2,13 +2,13 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import errorHandler, { AppError } from "../src/lib/error-handler";
 
 describe("Error handler function", () => {
+  const consoleLogSpy = vi.spyOn(console, "log").mockImplementation(() => undefined);
+
   afterEach(() => {
-    vi.restoreAllMocks();
+    consoleLogSpy.mockClear();
   });
 
   it("Logs the message to the console", () => {
-    const spy = vi.spyOn(console, "log").mockImplementation(() => undefined);
-
     errorHandler();
     errorHandler("");
     errorHandler(1);
@@ -17,33 +17,21 @@ describe("Error handler function", () => {
     errorHandler(new Error());
     errorHandler(null);
 
-    expect(spy).toHaveBeenCalledTimes(7);
+    expect(consoleLogSpy).toHaveBeenCalledTimes(7);
   });
 
   it("Exits the process when requested", () => {
-    vi.spyOn(console, "log").mockImplementation(() => undefined);
-    const spy = vi.spyOn(process, "exit").mockImplementation(() => new Promise<never>(() => {}));
+    const processExitSpy = vi.spyOn(process, "exit").mockImplementation(() => new Promise<never>(() => {}));
 
     errorHandler();
-    expect(spy).not.toHaveBeenCalled();
-
     errorHandler(1);
-    expect(spy).not.toHaveBeenCalled();
-
     errorHandler("");
-    expect(spy).not.toHaveBeenCalled();
-
     errorHandler(new Error(""));
-    expect(spy).not.toHaveBeenCalled();
-
     errorHandler(new AppError(""));
-    expect(spy).not.toHaveBeenCalled();
-
     errorHandler({ quit: true });
-    expect(spy).not.toHaveBeenCalled();
-
     errorHandler(new AppError("", true));
-    expect(spy).toHaveBeenCalledOnce();
+
+    expect(processExitSpy).toHaveBeenCalledOnce();
   });
 });
 
