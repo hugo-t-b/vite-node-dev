@@ -2,38 +2,31 @@ import inputListener from "../src/lib/input";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 describe("Input listener", () => {
+  const callbackSpy = vi.fn();
+
   afterEach(() => {
-    vi.restoreAllMocks();
+    callbackSpy.mockClear();
   });
 
   it("Calls the callback function with the correct input", () => {
-    const spy = vi.fn();
-
-    inputListener(spy);
+    inputListener(callbackSpy);
     process.stdin.emit("data", Buffer.from("."));
 
-    expect(spy).toHaveBeenNthCalledWith(1, ".");
+    expect(callbackSpy).toHaveBeenCalledOnce();
+    expect(callbackSpy).toHaveBeenCalledWith(".");
   });
 
   it("Trims the input", () => {
-    const spy = vi.fn();
-
-    inputListener(spy);
+    inputListener(callbackSpy);
 
     process.stdin.emit("data", Buffer.from("  . "));
-    expect(spy).toHaveBeenNthCalledWith(1, ".");
-    spy.mockClear();
-
     process.stdin.emit("data", Buffer.from("\n .\n"));
-    expect(spy).toHaveBeenNthCalledWith(1, ".");
-    spy.mockClear();
-
     process.stdin.emit("data", Buffer.from("\r .\r"));
-    expect(spy).toHaveBeenNthCalledWith(1, ".");
-    spy.mockClear();
-
     process.stdin.emit("data", Buffer.from("\r\n .\r\n"));
-    expect(spy).toHaveBeenNthCalledWith(1, ".");
-    spy.mockClear();
+
+    expect(callbackSpy).toHaveBeenNthCalledWith(1, ".");
+    expect(callbackSpy).toHaveBeenNthCalledWith(3, ".");
+    expect(callbackSpy).toHaveBeenNthCalledWith(2, ".");
+    expect(callbackSpy).toHaveBeenNthCalledWith(4, ".");
   });
 });
