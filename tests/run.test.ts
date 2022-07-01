@@ -24,6 +24,8 @@ describe("Run function", () => {
     };
 
     run("index.js", new ViteNodeRunner(viteNodeRunnerOptions));
-    expect(executeFileSpy).toHaveBeenNthCalledWith(1, "index.js");
+
+    expect(executeFileSpy).toHaveBeenCalledOnce();
+    expect(executeFileSpy).toHaveBeenCalledWith("index.js");
   });
 });
