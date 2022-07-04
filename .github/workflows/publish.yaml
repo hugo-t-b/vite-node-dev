@@ -3,7 +3,8 @@ on:
   release:
     types:
       - created
-  publish-npm:
+jobs:
+  npm:
     name: Publish to npm
     runs-on: ubuntu-latest
     steps:
