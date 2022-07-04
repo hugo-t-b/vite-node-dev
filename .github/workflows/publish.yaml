@@ -1,12 +1,10 @@
 name: Publish
-
 on:
   release:
     types:
       - created
   publish-npm:
     name: Publish to npm
-    needs: build
     runs-on: ubuntu-latest
     steps:
       -
