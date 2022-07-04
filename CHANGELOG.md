@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.3.1](https://github.com/hugo-t-b/vite-node-dev/releases/tag/v0.3.1) (2022-07-04)
+* Run build pre-publish ([c6b4e76](https://github.com/hugo-t-b/vite-node-dev/commit/c6b4e7664d86b85efa3dad0d01a21a72169c1181))
+
 ## [0.3.0](https://github.com/hugo-t-b/vite-node-dev/releases/tag/v0.3.0) (2022-07-04)
 * Add a `--run` flag to run a script without reloading ([#4](https://github.com/hugo-t-b/vite-node-dev/pull/4), [7a06652](https://github.com/hugo-t-b/vite-node-dev/commit/7a06652f735c09741cdca143ab14f0be2e0d826e))
 * Add a `--help` flag ([840dbac](https://github.com/hugo-t-b/vite-node-dev/commit/840dbac31d3a121b1936c30b92fb32001824fd7b))
