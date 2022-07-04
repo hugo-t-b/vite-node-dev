@@ -41,6 +41,16 @@ You might want to add a script for this command to your project's `package.json`
 
 To manually restart a running script without quitting vite-node-dev, type `rs` and hit `enter`.
 
+### Running a script without reloading
+
+The `--run` or `-r` flag instructs vite-node-dev to run a script with vite-node without reloading it: 
+
+```bash
+npx vite-node-dev --run [filename]
+```
+
+This is effectively equivalent to plain vite-node, but removes the need to manually install another dependency and can easily be passed as an additional argument to npm scripts.
+
 ## License
 
 MIT license: [https://github.com/hugo-t-b/vite-node-dev/blob/main/LICENSE.txt](https://github.com/hugo-t-b/vite-node-dev/blob/main/LICENSE.txt).
