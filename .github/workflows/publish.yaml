@@ -29,9 +29,6 @@ on:
         name: Install dependencies
         run: pnpm install
       -
-        name: Run build
-        run: pnpm build
-      -
         name: Publish
         run: pnpm publish
         env:
