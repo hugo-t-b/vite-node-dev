@@ -10,6 +10,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
+    "prepublishOnly": "eslint . && vitest --run && tsc",
     "build": "tsc",
     "lint": "eslint .",
     "test": "vitest --run",
