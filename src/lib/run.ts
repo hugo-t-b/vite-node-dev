@@ -14,19 +14,21 @@ export const createViteServer = async () => {
 
 export const createViteNodeServer = (viteServer: ViteDevServer) => new ViteNodeServer(viteServer);
 
-export const createViteNodeRunner = (viteServer: ViteDevServer, viteNodeServer: ViteNodeServer) => new ViteNodeRunner({
-  base: viteServer.config.base,
+export const createViteNodeRunner = (viteServer: ViteDevServer, viteNodeServer: ViteNodeServer) => {
+  return new ViteNodeRunner({
+    base: viteServer.config.base,
 
-  fetchModule(id) {
-    return viteNodeServer.fetchModule(id);
-  },
+    fetchModule(id) {
+      return viteNodeServer.fetchModule(id);
+    },
 
-  resolveId(id, importer) {
-    return viteNodeServer.resolveId(id, importer);
-  },
+    resolveId(id, importer) {
+      return viteNodeServer.resolveId(id, importer);
+    },
 
-  root: viteServer.config.root
-});
+    root: viteServer.config.root
+  });
+};
 
 export default async (script: string, runner: ViteNodeRunner) => {
   if (!script) {
