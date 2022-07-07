@@ -41,7 +41,7 @@ You might want to add a script for this command to your project's `package.json`
 
 To manually restart a running script without quitting vite-node-dev, type `rs` and hit `enter`.
 
-### Running a script without reloading
+### Running a Script Without Reloading
 
 The `--run` or `-r` flag instructs vite-node-dev to run a script with vite-node without reloading it: 
 
