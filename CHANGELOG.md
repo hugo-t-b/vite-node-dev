@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.0](https://github.com/hugo-t-b/vite-node-dev/releases/tag/v1.0.0) (2022-08-07)
+* BREAKING: use Vite 3 ([6a30d61](https://github.com/hugo-t-b/vite-node-dev/commit/6a30d61ba5e4d1ad13ffbdda62e660ecca5e5baa))
+
 ## [0.3.1](https://github.com/hugo-t-b/vite-node-dev/releases/tag/v0.3.1) (2022-07-04)
 * Run build pre-publish ([c6b4e76](https://github.com/hugo-t-b/vite-node-dev/commit/c6b4e7664d86b85efa3dad0d01a21a72169c1181))
 
