@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Run Node scripts with vite-node and reload them when they are changed.",
   "type": "module",
-  "packageManager": "pnpm@7.8.0",
+  "packageManager": "pnpm@7.13.2",
   "bin": {
     "vite-node-dev": "./dist/index.js"
   },
