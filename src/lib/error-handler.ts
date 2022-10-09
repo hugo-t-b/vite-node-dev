@@ -1,4 +1,4 @@
-import chalk from "chalk";
+import { red } from "colorette";
 
 export class AppError extends Error {
   quit: boolean;
@@ -20,7 +20,7 @@ export default (error?: unknown) => {
     ({ message } = error);
   }
 
-  const formattedMessage = chalk.red(message);
+  const formattedMessage = red(message);
   console.log(formattedMessage);
 
   if (error instanceof AppError && error.quit) {
