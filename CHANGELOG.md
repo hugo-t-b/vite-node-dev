@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.0](https://github.com/hugo-t-b/vite-node-dev/releases/tag/v1.1.0) (2022-10-09)
+* Use Colorette instead of Chalk for better performance ([2783960](https://github.com/hugo-t-b/vite-node-dev/commit/278396021ef0f4d809e8ea5c32b9729ee54536e7))
+
 ## [1.0.0](https://github.com/hugo-t-b/vite-node-dev/releases/tag/v1.0.0) (2022-08-07)
 * BREAKING: use Vite 3 ([6a30d61](https://github.com/hugo-t-b/vite-node-dev/commit/6a30d61ba5e4d1ad13ffbdda62e660ecca5e5baa))
 
