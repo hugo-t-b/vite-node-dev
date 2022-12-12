@@ -5,7 +5,7 @@ import { program } from "commander";
 
 program
   .name("vite-node-dev")
-  .version("1.0.0");
+  .version("2.0.0");
 
 program
   .argument("<file>")
