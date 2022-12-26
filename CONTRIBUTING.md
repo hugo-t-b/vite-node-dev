@@ -93,7 +93,7 @@ If a reviewer suggests changes to a commit message:
 
 1. Check out your branch.
 
-2. To modify the most recent commit message, use `git commit --ammend`. Otherwise use `git rebase`.
+2. To modify the most recent commit message, use `git commit --amend`. Otherwise use `git rebase`.
 
 3. Push to your GitHub repository:
 
@@ -167,9 +167,9 @@ An exclamation mark (!) if the change is breaking, otherwise nothing.
 
 ### Summary
 
-A succint description of the change:
+A succinct description of the change:
 * use the imperative, present tense: "change" not "changed" nor "changes"
-* capitalize the first letter
+* don't capitalize the first letter
 * no period (.) at the end
 
 For commits with the `release` type, the summary should be the new version number. If the commit reverts a previous one, quote the message of the reverted commit.
