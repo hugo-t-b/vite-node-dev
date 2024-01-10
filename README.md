@@ -2,6 +2,13 @@
 
 > Run Node scripts with [vite-node](https://www.npmjs.com/package/vite-node) and reload them when they are changed.
 
+## Overview
+> [!WARNING]  
+> The functionality that vite-node-dev provides is now [natively supported by vite-node](https://github.com/vitest-dev/vitest/pull/890). As a result, vite-node-dev is no longer being maintained and you should instead use vite-node's `--watch` option:
+> ```bash
+> vite-node --watch <file>
+> ```
+
 By default, vite-node has lightning fast support for TypeScript, ESM, Vite plugins, and more! This makes it a great choice for running Node apps. vite-node-dev allows you to run scripts with vite-node while automatically reloading them on change.
 
 ## Installation
