@@ -50,8 +50,8 @@ devDependencies:
     specifier: ^2.29.1
     version: 2.29.1(@typescript-eslint/parser@5.46.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
   husky:
-    specifier: ^8.0.2
-    version: 8.0.2
+    specifier: ^8.0.3
+    version: 8.0.3
   typescript:
     specifier: ^4.9.4
     version: 4.9.4
@@ -1908,8 +1908,8 @@ packages:
     engines: {node: '>=10.17.0'}
     dev: true
 
-  /husky@8.0.2:
-    resolution: {integrity: sha512-Tkv80jtvbnkK3mYWxPZePGFpQ/tT3HNSs/sasF9P2YfkMezDl3ON37YN6jUUI4eTg5LcyVynlb6r4eyvOmspvg==}
+  /husky@8.0.3:
+    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
