@@ -43,8 +43,13 @@ vi.mock("../src/lib/run", () => {
 });
 
 describe("Main function", () => {
-  const consoleClearSpy = vi.spyOn(console, "clear").mockImplementation(() => undefined);
-  const processExitSpy = vi.spyOn(process, "exit").mockImplementation(() => new Promise<never>(() => {}));
+  const consoleClearSpy = vi
+    .spyOn(console, "clear")
+    .mockImplementation(() => undefined);
+
+  const processExitSpy = vi.spyOn(process, "exit")
+    .mockImplementation((() => {}) as () => never);
+
   const runSpy = vi.spyOn(runExports, "default");
 
   afterEach(() => {

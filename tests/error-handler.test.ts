@@ -21,7 +21,11 @@ describe("Error handler function", () => {
   });
 
   it("Exits the process when requested", () => {
-    const processExitSpy = vi.spyOn(process, "exit").mockImplementation(() => new Promise<never>(() => {}));
+    const processExitImplementation = (() => {}) as () => never;
+
+    const processExitSpy = vi
+      .spyOn(process, "exit")
+      .mockImplementation(processExitImplementation);
 
     errorHandler();
     errorHandler(1);
