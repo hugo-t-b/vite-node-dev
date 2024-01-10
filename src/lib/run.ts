@@ -6,7 +6,12 @@ import { ViteNodeServer } from "vite-node/server";
 import { AppError } from "./error-handler.js";
 
 export const createViteServer = async () => {
-  const server = await createServer();
+  const server = await createServer({
+    optimizeDeps: {
+      disabled: true
+    }
+  });
+
   await server.pluginContainer.buildStart({});
 
   return server;
