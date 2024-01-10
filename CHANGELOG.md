@@ -1,5 +1,8 @@
 # Changelog
 
+## [3.0.0](https://github.com/hugo-t-b/vite-node-dev/releases/tag/v2.0.0) (2024-01-10)
+Final release: vite-node-dev is now deprecated in favour of vite-node's `--watch` option.
+
 ## [2.0.0](https://github.com/hugo-t-b/vite-node-dev/releases/tag/v2.0.0) (2022-12-12)
 * BREAKING: use Vite 4 ([3068ea2](https://github.com/hugo-t-b/vite-node-dev/commit/3068ea29d5571e386e904c8c075cff87578af9f3))
 

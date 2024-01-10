@@ -1,6 +1,6 @@
 {
   "name": "vite-node-dev",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Run Node scripts with vite-node and reload them when they are changed.",
   "type": "module",
   "packageManager": "pnpm@8.14.0+sha256.9cebf61abd83f68177b29484da72da9751390eaad46dfc3072d266bfbb1ba7bf",
