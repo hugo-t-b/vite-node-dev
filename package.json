@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "Run Node scripts with vite-node and reload them when they are changed.",
   "type": "module",
-  "packageManager": "pnpm@7.18.1",
+  "packageManager": "pnpm@8.14.0+sha256.9cebf61abd83f68177b29484da72da9751390eaad46dfc3072d266bfbb1ba7bf",
   "bin": {
     "vite-node-dev": "./dist/index.js"
   },
@@ -36,8 +36,8 @@
   },
   "homepage": "https://github.com/hugo-t-b/vite-node-dev#readme",
   "devDependencies": {
-    "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0",
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
     "@hugo-t-b/eslint-config": "^1.4.4",
     "@types/node": "^18.11.13",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
